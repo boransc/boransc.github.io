@@ -1,0 +1,222 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="cv" class="p-8 sm:p-12 md:p-16 lg:p-24 bg-gray-50">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900 mb-4">
+        Curriculum Vitae
+      </h2>
+      <div
+        class="w-[75px] h-[5px] mx-auto rounded-full mb-6"
+        style={`background-color: ${siteConfig.accentColor}`}
+      />
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
+        <span class="font-medium text-lg">{siteConfig.name}</span>
+        <span class="hidden sm:inline">•</span>
+        <span>{siteConfig.title}</span>
+        <span class="hidden sm:inline">•</span>
+        <a 
+          href={`mailto:${siteConfig.social.email}`}
+          class="hover:text-blue-600 transition-colors"
+        >
+          {siteConfig.social.email}
+        </a>
+      </div>
+      
+      <!-- Download CV Button -->
+      {siteConfig.social.CV && (
+        <div class="mt-6">
+          <a
+            href={siteConfig.social.CV}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all duration-300 font-medium"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Download CV
+          </a>
+        </div>
+      )}
+    </div>
+
+    <!-- Education Section -->
+    {siteConfig.education && siteConfig.education.length > 0 && (
+      <div class="mb-10">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+          <span
+            class="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+            style={`background-color: ${siteConfig.accentColor}`}
+          >
+            E
+          </span>
+          Education
+        </h3>
+        <div class="space-y-6">
+          {siteConfig.education.map((edu) => (
+            <div class="bg-white p-6 rounded-lg border border-gray-200">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                <h4 class="text-xl font-semibold text-gray-900">{edu.school}</h4>
+                <span
+                  class="text-sm font-medium mt-1 sm:mt-0"
+                  style={`color: ${siteConfig.accentColor}`}
+                >
+                  {edu.dateRange}
+                </span>
+              </div>
+              <p class="text-gray-700 font-medium mb-3">{edu.degree}</p>
+              {edu.achievements && edu.achievements.length > 0 && (
+                <ul class="space-y-2">
+                  {edu.achievements.map((achievement) => (
+                    <li class="flex items-start gap-2 text-gray-600">
+                      <span
+                        class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                        style={`background-color: ${siteConfig.accentColor}`}
+                      />
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Experience Section -->
+    {siteConfig.experience && siteConfig.experience.length > 0 && (
+      <div class="mb-10">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+          <span
+            class="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+            style={`background-color: ${siteConfig.accentColor}`}
+          >
+            W
+          </span>
+          Work Experience
+        </h3>
+        <div class="space-y-6">
+          {siteConfig.experience.map((exp) => (
+            <div class="bg-white p-6 rounded-lg border border-gray-200">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                <div>
+                  <h4 class="text-xl font-semibold text-gray-900">{exp.title}</h4>
+                  <p class="text-gray-700 font-medium">{exp.company}</p>
+                </div>
+                <span
+                  class="text-sm font-medium mt-2 sm:mt-0"
+                  style={`color: ${siteConfig.accentColor}`}
+                >
+                  {exp.dateRange}
+                </span>
+              </div>
+              {exp.bullets && exp.bullets.length > 0 && (
+                <ul class="space-y-2">
+                  {exp.bullets.map((bullet) => (
+                    <li class="flex items-start gap-3 text-gray-600">
+                      <span
+                        class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                        style={`background-color: ${siteConfig.accentColor}`}
+                      />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Skills Section -->
+    {siteConfig.skills && siteConfig.skills.length > 0 && (
+      <div class="mb-10">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+          <span
+            class="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+            style={`background-color: ${siteConfig.accentColor}`}
+          >
+            S
+          </span>
+          Technical Skills
+        </h3>
+        <div class="bg-white p-6 rounded-lg border border-gray-200">
+          <div class="flex flex-wrap gap-2">
+            {siteConfig.skills.map((skill) => (
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md text-sm font-medium border">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- Projects Section -->
+    {siteConfig.projects && siteConfig.projects.length > 0 && (
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+          <span
+            class="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+            style={`background-color: ${siteConfig.accentColor}`}
+          >
+            P
+          </span>
+          Key Projects
+        </h3>
+        <div class="space-y-6">
+          {siteConfig.projects.map((project) => (
+            <div class="bg-white p-6 rounded-lg border border-gray-200">
+              <div class="flex items-start justify-between mb-3">
+                <h4 class="text-xl font-semibold text-gray-900">{project.name}</h4>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                )}
+              </div>
+              <p class="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+              {project.skills && project.skills.length > 0 && (
+                <div class="flex flex-wrap gap-1.5">
+                  {project.skills.map((skill) => (
+                    <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
