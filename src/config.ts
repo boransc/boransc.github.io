@@ -33,6 +33,13 @@ export const siteConfig = {
       skills: ["React", "Node.js", "MongoDB", "SCSS", "Stripe API"],
     },
     {
+      name: "PokeTracker",
+      description:
+        "PokeTracker is a cross-platform React Native application built with Expo, designed to help Pokémon enthusiasts effortlessly track and manage their Pokémon collection and activities. Developed with over 1000 lines of code, developing this application was a fun project and challenge which got me over 80% on a university assignment, getting praises from my professors. Whether you’re a casual fan or a competitive player, this app brings essential features to your fingertips.",
+      link: "",
+      skills: ["React Native", "Expo", "JavaScript", "Local Storage", "API integration"],
+    },
+    {
       name: "Health Data Analysis",
       description:
         "Conducted an end-to-end health data analysis project using Python. Applied PCA and SVM models to identify diabetes risk factors, leveraging pandas, scikit-learn, and Matplotlib for data cleaning and visualisation.",
