@@ -35,8 +35,8 @@ export const siteConfig = {
     {
       name: "PokeTracker",
       description:
-        "PokeTracker is a cross-platform React Native application built with Expo, designed to help Pokémon enthusiasts effortlessly track and manage their Pokémon collection and activities. Developed with over 1000 lines of code, developing this application was a fun project and challenge which got me over 80% on a university assignment, getting praises from my professors. Whether you’re a casual fan or a competitive player, this app brings essential features to your fingertips.",
-      link: "",
+        "PokeTracker is a cross-platform React Native application built with Expo, designed to help Pokémon enthusiasts effortlessly track and manage their Pokémon collection and activities. Developed with over 1000 lines of code, developing this application was a fun project and challenge which got me over 80% on a university assignment, getting praises from my professors. Whether you’re a casual fan or a competitive player, this app brings essential features to your fingertips. You can test it out in the link provided on this card!",
+      link: "https://snack.expo.dev/@arashii/poketracker-final-app?platform=android",
       skills: ["React Native", "Expo", "JavaScript", "Local Storage", "API integration"],
     },
     {
