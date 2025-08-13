@@ -10,7 +10,7 @@ export const siteConfig = {
     github: "https://github.com/boransc",
   },
   aboutMe:
-    "I'm a Computer Science student at the University of Hertfordshire with a strong interest in Full-Stack Development, Data Analysis, DevOps and much more. I have hands-on experience in developing responsive admin dashboards, integrating payment systems, and visualising data trends. I’m passionate about problem-solving, working with modern web technologies, and contributing to meaningful projects. Outside of tech, I enjoy fitness and helping others grow through tutoring and mentorship. I always strive to learn new skills and techniques to continuously improve myself and therefore increase my contributions to the business.",
+    "I’m a Computer Science student at the University of Hertfordshire with a strong interest in Full-Stack Development, Data Analysis, DevOps, Artificial Intelligence, and Machine Learning. I have hands-on experience in developing responsive admin dashboards, integrating payment systems, and visualising data trends. I’m passionate about problem-solving, working with modern web technologies, and exploring intelligent systems that can enhance decision-making and efficiency. Outside of tech, I enjoy fitness and helping others grow through tutoring and mentorship. I always strive to learn new skills and techniques to continuously improve myself and increase my contributions to any project or organisation.",
   skills: [
     "Python", "JavaScript", "Java", "Dart", "TypeScript", "SQL",
     "React", "Flutter", "SCSS", "HTML", "CSS", "TailwindCSS",
